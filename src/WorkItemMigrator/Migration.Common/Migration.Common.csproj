@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{3D3E0FD1-05FC-454B-828A-9004D3DDB296}</ProjectGuid>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>Migration.Common</AssemblyTitle>
     <Product>Migration.Common</Product>
@@ -8,20 +7,11 @@
     <Version>0.0.1</Version>
     <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssetTargetFallback>portable-net451+win8</AssetTargetFallback>
-</PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.1.0-preview" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.2.0-preview3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-
-    <PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="16.142.0-preview" />
-    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="16.142.0-preview" />
-    <PackageReference Include="Microsoft.VisualStudio.Services.InteractiveClient" Version="16.142.0-preview" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
-    <PackageReference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts" Version="16.142.0-preview" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0-preview5-19264-04" />
   
   </ItemGroup>
   <ItemGroup>

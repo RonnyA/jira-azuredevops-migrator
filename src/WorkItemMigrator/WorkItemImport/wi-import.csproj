@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{FE3852EF-A2A8-45B7-8598-CA9400D7F60B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>WorkItemImport</RootNamespace>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <AssemblyTitle>wi-import</AssemblyTitle>
     <Product>Work Item Importer</Product>
@@ -11,8 +10,16 @@
     <Version>0.0.1</Version>
     <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+  <AssetTargetFallback>$(AssetTargetFallback);portable-net451+win8</AssetTargetFallback>
+</PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Atlassian.SDK" Version="10.4.0" />
+    <PackageReference Include="Atlassian.SDK" Version="10.6.0" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="16.152.0-preview" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.ExtendedClient" Version="16.152.0-preview" /> 
+    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="16.152.0-preview" />
+    <PackageReference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts" Version="16.152.0-preview" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Migration.Common\Migration.Common.csproj" />

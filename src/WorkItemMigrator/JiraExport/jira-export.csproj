@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{600E6ED8-49FD-46F0-8498-ADEADAEBDF6C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>JiraExport</RootNamespace>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\temp\jirapublish\</PublishUrl>
@@ -51,18 +50,15 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <AssetTargetFallback>portable-net451+win8</AssetTargetFallback>
-  </PropertyGroup>
+  <AssetTargetFallback>$(AssetTargetFallback);portable-net451+win8</AssetTargetFallback>
+</PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Atlassian.SDK.Signed" Version="10.4.0" />
+    <PackageReference Include="Atlassian.SDK" Version="10.6.0" />
     <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="RestSharp" Version="106.5.4" />
-    <PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="16.142.0-preview" />
-    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="16.142.0-preview" />
-    <PackageReference Include="Microsoft.VisualStudio.Services.InteractiveClient" Version="16.142.0-preview" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
-    <PackageReference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts" Version="16.142.0-preview" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="RestSharp" Version="106.6.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0-preview5-19264-04" />
+
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Migration.Common\Migration.Common.csproj" />
